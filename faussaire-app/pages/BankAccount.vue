@@ -19,7 +19,7 @@
 
 <script>
 import { ref } from 'vue';
-import {faker} from '@faker-js/faker'
+import { fakerFR as faker } from '@faker-js/faker';
 export default {
     name: 'BankAccount',
 
@@ -33,17 +33,16 @@ export default {
         let rib = ref('');
 
       function generateBnkAcc () {
-        faker.locale = 'fr';
         let codeBank = Math.floor(Math.random() * (99999 - 10000)+ 10000) 
         let codeGuichet = Math.floor(Math.random() * (99999 - 10000)+ 10000) 
         let numberAcc = Math.floor(Math.random() * (99999999999-10000000000) + 100000000 )
 
 
-        prenom.value = faker.name.firstName()
-        nom.value = faker.name.lastName()
+        prenom.value = faker.person.firstName()
+        nom.value = faker.person.lastName()
         telephone.value = faker.phone.number('+33 06 ## ## ## ##')
         email.value = faker.internet.email()
-        adresse.value = faker.address.streetAddress() + "," + faker.address.cityName()
+        adresse.value = faker.location.streetAddress() + "," + faker.location.city()
         iban.value = 'FR76' + codeBank + "" + codeGuichet + "" + numberAcc
         rib.value = codeBank + "" + codeGuichet + "" + numberAcc
 

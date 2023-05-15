@@ -32,12 +32,12 @@ export default {
 
         function generateid () {
 
-            prenom.value = faker.firstName()
+            prenom.value = faker.person.firstName()
             nom.value = faker.person.lastName()
             telephone.value = faker.phone.number('+33 06 ## ## ## ##')
             email.value = faker.internet.email()
             password.value = faker.internet.password()
-            adresse.value = faker.location.streetAddress() + "," + faker.address.cityName()
+            adresse.value = faker.location.streetAddress() + "," + faker.location.city()
             
         }
 
