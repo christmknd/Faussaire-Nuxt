@@ -2,6 +2,7 @@
     <header>
     <nav>
       <ul>
+        <li><nuxt-link to="/">Accueil</nuxt-link></li>
         <li><nuxt-link to="/bankAccount">Compte Bancaire</nuxt-link> </li>
         <li><nuxt-link to="/company">Entreprise</nuxt-link> </li>
         <li><nuxt-link to="/identity">Identité</nuxt-link> </li>

@@ -8,8 +8,10 @@ export default {
 
 <template>
     <div>
-      <Navbar/>
+      <body>
+        <Navbar/>
       <slot/>
+      </body>
     </div>
   </template>
   
